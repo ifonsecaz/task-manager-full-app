@@ -1,0 +1,924 @@
+2025-06-11T11:05:40.160-06:00  INFO 24128 --- [userservice] [main] c.e.userservice.UserserviceApplication   : Starting UserserviceApplication using Java 23.0.1 with PID 24128 (D:\ifons\Documents\JavaProjects\task-manager-fullApp\userservice\target\classes started by ifons in D:\ifons\Documents\JavaProjects\task-manager-fullApp\userservice)
+2025-06-11T11:05:40.164-06:00  INFO 24128 --- [userservice] [main] c.e.userservice.UserserviceApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-06-11T11:05:40.704-06:00  INFO 24128 --- [userservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-11T11:05:40.806-06:00  INFO 24128 --- [userservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 2 JPA repository interfaces.
+2025-06-11T11:05:40.970-06:00  INFO 24128 --- [userservice] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=93c666b9-71c7-3a26-9471-89aeba8d13d2
+2025-06-11T11:05:41.221-06:00  INFO 24128 --- [userservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-06-11T11:05:41.230-06:00  INFO 24128 --- [userservice] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-11T11:05:41.230-06:00  INFO 24128 --- [userservice] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-11T11:05:41.281-06:00  INFO 24128 --- [userservice] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-11T11:05:41.282-06:00  INFO 24128 --- [userservice] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1083 ms
+2025-06-11T11:05:41.390-06:00  INFO 24128 --- [userservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-11T11:05:41.424-06:00  INFO 24128 --- [userservice] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-11T11:05:41.446-06:00  INFO 24128 --- [userservice] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-11T11:05:41.617-06:00  INFO 24128 --- [userservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-11T11:05:41.637-06:00  INFO 24128 --- [userservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-11T11:05:41.640-06:00  WARN 24128 --- [userservice] [main] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2025-06-11T11:05:41.874-06:00  INFO 24128 --- [userservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d8e4fa8
+2025-06-11T11:05:41.875-06:00  INFO 24128 --- [userservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-11T11:05:41.931-06:00  INFO 24128 --- [userservice] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-11T11:05:42.591-06:00  INFO 24128 --- [userservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-11T11:05:42.761-06:00  INFO 24128 --- [userservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-11T11:05:42.995-06:00  INFO 24128 --- [userservice] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-06-11T11:05:43.106-06:00  WARN 24128 --- [userservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-11T11:05:43.342-06:00  WARN 24128 --- [userservice] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-06-11T11:05:43.546-06:00  INFO 24128 --- [userservice] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-06-11T11:05:43.572-06:00  WARN 24128 --- [userservice] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-06-11T11:05:43.592-06:00  INFO 24128 --- [userservice] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-06-11T11:05:43.609-06:00  INFO 24128 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-06-11T11:05:43.612-06:00  INFO 24128 --- [userservice] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T11:05:43.619-06:00  INFO 24128 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-06-11T11:05:43.619-06:00  INFO 24128 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-06-11T11:05:43.620-06:00  INFO 24128 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-06-11T11:05:43.620-06:00  INFO 24128 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-06-11T11:05:43.620-06:00  INFO 24128 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-06-11T11:05:43.620-06:00  INFO 24128 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-06-11T11:05:43.620-06:00  INFO 24128 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-06-11T11:05:43.863-06:00  INFO 24128 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-06-11T11:05:43.865-06:00  INFO 24128 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-06-11T11:05:43.867-06:00  INFO 24128 --- [userservice] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-06-11T11:05:43.869-06:00  INFO 24128 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1749661543867 with initial instances count: 2
+2025-06-11T11:05:43.871-06:00  INFO 24128 --- [userservice] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USERSERVICE with eureka with status UP
+2025-06-11T11:05:43.872-06:00  INFO 24128 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749661543872, current=UP, previous=STARTING]
+2025-06-11T11:05:43.873-06:00  INFO 24128 --- [userservice] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERSERVICE/DESKTOP-QDBU73I:userservice:8081: registering service...
+2025-06-11T11:05:43.887-06:00  INFO 24128 --- [userservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-06-11T11:05:43.888-06:00  INFO 24128 --- [userservice] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2025-06-11T11:05:43.902-06:00  INFO 24128 --- [userservice] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERSERVICE/DESKTOP-QDBU73I:userservice:8081 - registration status: 204
+2025-06-11T11:05:43.904-06:00  INFO 24128 --- [userservice] [main] c.e.userservice.UserserviceApplication   : Started UserserviceApplication in 4.131 seconds (process running for 4.51)
+2025-06-11T11:10:43.633-06:00  INFO 24128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T11:15:43.648-06:00  INFO 24128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T11:20:43.658-06:00  INFO 24128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T11:25:43.661-06:00  INFO 24128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T11:27:36.034-06:00  INFO 24128 --- [userservice] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-11T11:27:36.036-06:00  INFO 24128 --- [userservice] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-11T11:27:36.036-06:00  INFO 24128 --- [userservice] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-06-11T11:27:36.049-06:00  INFO 24128 --- [userservice] [http-nio-8081-exec-1] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/register from 127.0.0.1
+2025-06-11T11:27:37.869-06:00 ERROR 24128 --- [userservice] [http-nio-8081-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.mail.MailAuthenticationException: Authentication failed] with root cause
+
+jakarta.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5614622812f47-40a5d95f008sm404584b6e.42 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-2.0.1.jar:2.0.1]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-2.0.1.jar:2.0.1]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-2.0.1.jar:2.0.1]
+	at jakarta.mail.Service.connect(Service.java:345) ~[jakarta.mail-2.0.3.jar:na]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:480) ~[spring-context-support-6.2.6.jar:6.2.6]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:399) ~[spring-context-support-6.2.6.jar:6.2.6]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:350) ~[spring-context-support-6.2.6.jar:6.2.6]
+	at org.springframework.mail.javamail.JavaMailSender.send(JavaMailSender.java:101) ~[spring-context-support-6.2.6.jar:6.2.6]
+	at com.etask.userservice.service.EmailService.sendOtp(EmailService.java:29) ~[classes/:na]
+	at com.etask.userservice.controller.AuthApiController.registerUser(AuthApiController.java:128) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380) ~[spring-tx-6.2.6.jar:6.2.6]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.6.jar:6.2.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728) ~[spring-aop-6.2.6.jar:6.2.6]
+	at com.etask.userservice.controller.AuthApiController$$SpringCGLIB$$0.registerUser(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.40.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.40.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at com.etask.userservice.security.RequestLoggingFilter.doFilterInternal(RequestLoggingFilter.java:34) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238) ~[spring-security-config-6.4.5.jar:6.4.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.lang.Thread.run(Thread.java:1575) ~[na:na]
+
+2025-06-11T11:29:51.193-06:00  INFO 24128 --- [userservice] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application USERSERVICE with eureka with status DOWN
+2025-06-11T11:29:51.193-06:00  INFO 24128 --- [userservice] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749662991193, current=DOWN, previous=UP]
+2025-06-11T11:29:51.193-06:00  INFO 24128 --- [userservice] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERSERVICE/DESKTOP-QDBU73I:userservice:8081: registering service...
+2025-06-11T11:29:51.195-06:00  INFO 24128 --- [userservice] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-11T11:29:51.208-06:00  INFO 24128 --- [userservice] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERSERVICE/DESKTOP-QDBU73I:userservice:8081 - registration status: 204
+2025-06-11T11:29:51.212-06:00  INFO 24128 --- [userservice] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-11T11:29:51.217-06:00  INFO 24128 --- [userservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-11T11:29:51.219-06:00  INFO 24128 --- [userservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-11T11:29:51.272-06:00  INFO 24128 --- [userservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-11T11:29:51.273-06:00  INFO 24128 --- [userservice] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-06-11T11:29:54.288-06:00  INFO 24128 --- [userservice] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-06-11T11:29:54.307-06:00  INFO 24128 --- [userservice] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERSERVICE/DESKTOP-QDBU73I:userservice:8081 - deregister  status: 200
+2025-06-11T11:29:54.307-06:00  INFO 24128 --- [userservice] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-06-11T11:30:01.603-06:00  INFO 28128 --- [userservice] [main] c.e.userservice.UserserviceApplication   : Starting UserserviceApplication using Java 23.0.1 with PID 28128 (D:\ifons\Documents\JavaProjects\task-manager-fullApp\userservice\target\classes started by ifons in D:\ifons\Documents\JavaProjects\task-manager-fullApp\userservice)
+2025-06-11T11:30:01.605-06:00  INFO 28128 --- [userservice] [main] c.e.userservice.UserserviceApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-06-11T11:30:02.132-06:00  INFO 28128 --- [userservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-11T11:30:02.230-06:00  INFO 28128 --- [userservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 2 JPA repository interfaces.
+2025-06-11T11:30:02.396-06:00  INFO 28128 --- [userservice] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=93c666b9-71c7-3a26-9471-89aeba8d13d2
+2025-06-11T11:30:02.685-06:00  INFO 28128 --- [userservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-06-11T11:30:02.697-06:00  INFO 28128 --- [userservice] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-11T11:30:02.697-06:00  INFO 28128 --- [userservice] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-11T11:30:02.797-06:00  INFO 28128 --- [userservice] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-11T11:30:02.798-06:00  INFO 28128 --- [userservice] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1160 ms
+2025-06-11T11:30:02.907-06:00  INFO 28128 --- [userservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-11T11:30:02.957-06:00  INFO 28128 --- [userservice] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-11T11:30:02.985-06:00  INFO 28128 --- [userservice] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-11T11:30:03.176-06:00  INFO 28128 --- [userservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-11T11:30:03.199-06:00  INFO 28128 --- [userservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-11T11:30:03.201-06:00  WARN 28128 --- [userservice] [main] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2025-06-11T11:30:03.506-06:00  INFO 28128 --- [userservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1fcc3461
+2025-06-11T11:30:03.508-06:00  INFO 28128 --- [userservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-11T11:30:03.570-06:00  INFO 28128 --- [userservice] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-11T11:30:04.228-06:00  INFO 28128 --- [userservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-11T11:30:04.312-06:00  INFO 28128 --- [userservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-11T11:30:04.533-06:00  INFO 28128 --- [userservice] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-06-11T11:30:04.634-06:00  WARN 28128 --- [userservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-11T11:30:04.868-06:00  WARN 28128 --- [userservice] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-06-11T11:30:05.062-06:00  INFO 28128 --- [userservice] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-06-11T11:30:05.085-06:00  WARN 28128 --- [userservice] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-06-11T11:30:05.100-06:00  INFO 28128 --- [userservice] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-06-11T11:30:05.119-06:00  INFO 28128 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-06-11T11:30:05.122-06:00  INFO 28128 --- [userservice] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T11:30:05.128-06:00  INFO 28128 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-06-11T11:30:05.128-06:00  INFO 28128 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-06-11T11:30:05.128-06:00  INFO 28128 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-06-11T11:30:05.128-06:00  INFO 28128 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-06-11T11:30:05.129-06:00  INFO 28128 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-06-11T11:30:05.129-06:00  INFO 28128 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-06-11T11:30:05.129-06:00  INFO 28128 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-06-11T11:30:05.384-06:00  INFO 28128 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-06-11T11:30:05.385-06:00  INFO 28128 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-06-11T11:30:05.387-06:00  INFO 28128 --- [userservice] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-06-11T11:30:05.389-06:00  INFO 28128 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1749663005387 with initial instances count: 2
+2025-06-11T11:30:05.392-06:00  INFO 28128 --- [userservice] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USERSERVICE with eureka with status UP
+2025-06-11T11:30:05.392-06:00  INFO 28128 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749663005392, current=UP, previous=STARTING]
+2025-06-11T11:30:05.393-06:00  INFO 28128 --- [userservice] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERSERVICE/DESKTOP-QDBU73I:userservice:8081: registering service...
+2025-06-11T11:30:05.418-06:00  INFO 28128 --- [userservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-06-11T11:30:05.419-06:00  INFO 28128 --- [userservice] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2025-06-11T11:30:05.419-06:00  INFO 28128 --- [userservice] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERSERVICE/DESKTOP-QDBU73I:userservice:8081 - registration status: 204
+2025-06-11T11:30:05.435-06:00  INFO 28128 --- [userservice] [main] c.e.userservice.UserserviceApplication   : Started UserserviceApplication in 4.163 seconds (process running for 4.654)
+2025-06-11T11:30:31.814-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-11T11:30:31.815-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-11T11:30:31.816-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-11T11:30:31.830-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-1] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/register from 127.0.0.1
+2025-06-11T11:30:34.173-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-1] c.e.u.security.RequestLoggingFilter      : Response: /auth/register (Status: 200)
+2025-06-11T11:30:50.222-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-2] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/verify-otp from 127.0.0.1
+2025-06-11T11:30:50.355-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-2] c.e.u.security.RequestLoggingFilter      : Response: /auth/verify-otp (Status: 200)
+2025-06-11T11:30:58.801-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-3] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/verify-otp from 127.0.0.1
+2025-06-11T11:30:58.806-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-3] c.e.u.security.RequestLoggingFilter      : Response: /auth/verify-otp (Status: 400)
+2025-06-11T11:35:05.141-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T11:40:05.150-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T11:43:25.168-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-4] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/register from 127.0.0.1
+2025-06-11T11:43:26.942-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-4] c.e.u.security.RequestLoggingFilter      : Response: /auth/register (Status: 200)
+2025-06-11T11:43:47.440-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-5] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/verify-otp from 127.0.0.1
+2025-06-11T11:43:47.541-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-5] c.e.u.security.RequestLoggingFilter      : Response: /auth/verify-otp (Status: 200)
+2025-06-11T11:45:05.155-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T11:45:42.299-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-7] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/register from 127.0.0.1
+2025-06-11T11:45:44.273-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-7] c.e.u.security.RequestLoggingFilter      : Response: /auth/register (Status: 200)
+2025-06-11T11:45:56.522-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-8] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/verify-otp from 127.0.0.1
+2025-06-11T11:45:56.590-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-8] c.e.u.security.RequestLoggingFilter      : Response: /auth/verify-otp (Status: 200)
+2025-06-11T11:46:44.535-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-9] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/register from 127.0.0.1
+2025-06-11T11:46:46.579-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-9] c.e.u.security.RequestLoggingFilter      : Response: /auth/register (Status: 200)
+2025-06-11T11:46:59.656-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-10] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/verify-otp from 127.0.0.1
+2025-06-11T11:46:59.712-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-10] c.e.u.security.RequestLoggingFilter      : Response: /auth/verify-otp (Status: 200)
+2025-06-11T11:47:27.133-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-1] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T11:47:27.254-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-1] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T11:50:05.161-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T11:55:05.166-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T12:00:05.167-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T12:05:05.175-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T12:10:05.179-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T12:15:05.187-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T12:20:05.192-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T12:25:05.199-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T12:30:05.204-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T12:35:05.210-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T12:40:05.225-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T12:45:05.234-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T12:50:05.240-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T12:55:05.247-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T13:00:05.260-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T13:05:05.271-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T13:10:05.279-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T13:15:05.287-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T13:15:20.441-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-3] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T13:15:20.513-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-3] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T13:20:05.293-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T13:25:05.301-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T13:26:07.081-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-5] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T13:26:07.186-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-5] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T13:30:05.315-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T13:33:54.933-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-7] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T13:33:55.004-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-7] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T13:35:05.322-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T13:40:05.335-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T13:45:05.337-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T13:46:45.345-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-9] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T13:46:45.421-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-9] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T13:50:05.344-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T13:55:05.347-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T14:00:05.358-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T14:01:48.341-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-1] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T14:01:48.374-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-1] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T14:05:05.370-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T14:10:05.383-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T14:15:05.394-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T14:20:05.410-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T14:25:05.411-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T14:29:47.212-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-3] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T14:29:47.217-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-3] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T14:30:05.421-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T14:35:05.428-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T14:40:05.438-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T14:45:05.449-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T14:45:28.069-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-5] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T14:45:28.076-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-5] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T14:50:05.462-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T14:55:05.467-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T14:56:22.355-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-7] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T14:56:22.361-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-7] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T14:56:22.363-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-8] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T14:56:22.368-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-8] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T14:56:52.360-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-9] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T14:56:52.361-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-10] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T14:56:52.365-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-9] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T14:56:52.380-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-10] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T14:57:22.394-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-2] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T14:57:22.394-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-1] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T14:57:22.399-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-1] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T14:57:22.434-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-2] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T14:57:51.532-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-3] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T14:57:51.537-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-3] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T14:57:51.578-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-4] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T14:57:51.584-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-4] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T14:58:22.360-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-5] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T14:58:22.360-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-6] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T14:58:22.367-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-5] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T14:58:22.379-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-6] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T14:58:48.256-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-7] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T14:58:48.437-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-7] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 401)
+2025-06-11T14:58:54.689-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-8] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T14:58:54.747-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-8] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 401)
+2025-06-11T14:59:35.203-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-9] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T14:59:35.273-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-9] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T15:00:00.300-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-10] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:00:00.305-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-10] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:00:00.320-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-1] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:00:00.320-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-2] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:00:00.325-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-2] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:00:00.325-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-1] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:00:05.473-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T15:00:30.342-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-4] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:00:30.342-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-3] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:00:30.346-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-3] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:00:30.346-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-4] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:00:30.375-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-5] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:00:30.379-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-5] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:01:00.340-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-6] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:01:00.342-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-8] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:01:00.342-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-7] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:01:00.345-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-6] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:01:00.346-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-8] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:01:00.346-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-7] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:01:30.257-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-2] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:01:30.257-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-1] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:01:30.257-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-10] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:01:30.263-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-2] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:01:30.263-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-1] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:01:30.263-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-10] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:02:00.275-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-5] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:02:00.275-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-3] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:02:00.275-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-4] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:02:00.280-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-5] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:02:00.280-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-3] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:02:00.280-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-4] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:02:30.357-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-6] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:02:30.357-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-7] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:02:30.357-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-8] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:02:30.363-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-6] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:02:30.363-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-7] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:02:30.363-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-8] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:03:00.351-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-2] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:03:00.351-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-1] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:03:00.351-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-9] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:03:00.355-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-2] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:03:00.356-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-1] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:03:00.356-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-9] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:03:01.154-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-10] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T15:03:01.243-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-10] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T15:03:42.646-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-5] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:03:42.646-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-3] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:03:42.646-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-4] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:03:42.650-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-3] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:03:42.650-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-4] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:03:42.650-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-5] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:04:00.344-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-6] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:04:00.344-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-7] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:04:00.347-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-6] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:04:00.347-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-7] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:04:00.358-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-8] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:04:00.364-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-8] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:04:30.346-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-9] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:04:30.346-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-1] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:04:30.346-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-2] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:04:30.349-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-1] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:04:30.349-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-9] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:04:30.349-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-2] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:05:00.336-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-3] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:05:00.336-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-10] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:05:00.336-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-4] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:05:00.341-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-3] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:05:00.341-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-4] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:05:00.341-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-10] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:05:05.475-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T15:05:30.357-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-5] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:05:30.357-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-6] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:05:30.357-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-7] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:05:30.361-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-6] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:05:30.361-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-5] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:05:30.361-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-7] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:06:00.366-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-1] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:06:00.366-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-8] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:06:00.370-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-8] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:06:00.370-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-1] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:06:00.373-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-9] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:06:00.378-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-9] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:06:30.347-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-4] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:06:30.347-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-10] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:06:30.347-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-2] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:06:30.352-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-4] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:06:30.352-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-2] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:06:30.352-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-10] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:07:00.349-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-5] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:07:00.349-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-3] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:07:00.349-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-6] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:07:00.353-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-5] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:07:00.353-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-6] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:07:00.353-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-3] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:07:43.345-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-1] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:07:43.345-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-7] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:07:43.345-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-8] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:07:43.349-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-8] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:07:43.349-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-1] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:07:43.349-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-7] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:08:06.584-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-4] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:08:06.584-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-2] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:08:06.584-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-9] c.e.u.security.RequestLoggingFilter      : Request: POST /user/refresh/5 from 127.0.0.1
+2025-06-11T15:08:06.590-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-2] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:08:06.590-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-4] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:08:06.590-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-9] c.e.u.security.RequestLoggingFilter      : Response: /user/refresh/5 (Status: 200)
+2025-06-11T15:10:05.481-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T15:15:05.486-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T15:20:05.488-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T15:22:56.406-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-3] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/register from 127.0.0.1
+2025-06-11T15:23:00.677-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-3] c.e.u.security.RequestLoggingFilter      : Response: /auth/register (Status: 200)
+2025-06-11T15:23:17.747-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-1] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/verify-otp from 127.0.0.1
+2025-06-11T15:23:17.819-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-1] c.e.u.security.RequestLoggingFilter      : Response: /auth/verify-otp (Status: 200)
+2025-06-11T15:24:20.557-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-7] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T15:24:20.628-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-7] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T15:25:05.497-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T15:30:05.506-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T15:33:01.554-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-4] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T15:33:01.633-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-4] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T15:35:05.511-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T15:37:12.435-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-5] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T15:37:12.569-06:00  INFO 28128 --- [userservice] [http-nio-8081-exec-5] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T15:40:05.516-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T15:45:05.523-06:00  INFO 28128 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T15:48:41.658-06:00  INFO 28128 --- [userservice] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application USERSERVICE with eureka with status DOWN
+2025-06-11T15:48:41.658-06:00  INFO 28128 --- [userservice] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749678521658, current=DOWN, previous=UP]
+2025-06-11T15:48:41.659-06:00  INFO 28128 --- [userservice] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERSERVICE/DESKTOP-QDBU73I:userservice:8081: registering service...
+2025-06-11T15:48:41.841-06:00  INFO 28128 --- [userservice] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on POST request for "http://localhost:8761/eureka/apps/USERSERVICE": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/USERSERVICE": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:760)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:183)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:141)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 21 more
+
+2025-06-11T15:48:41.841-06:00  WARN 28128 --- [userservice] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/USERSERVICE": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2025-06-11T15:48:41.846-06:00  INFO 28128 --- [userservice] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for "http://localhost:8761/eureka/apps/USERSERVICE": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/USERSERVICE": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:760)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:183)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:141)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 22 more
+
+2025-06-11T15:48:41.847-06:00  WARN 28128 --- [userservice] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/USERSERVICE": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2025-06-11T15:48:41.848-06:00  INFO 28128 --- [userservice] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-11T15:48:41.848-06:00  WARN 28128 --- [userservice] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERSERVICE/DESKTOP-QDBU73I:userservice:8081 - registration failed Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105) ~[eureka-client-2.0.4.jar:2.0.4]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1575) ~[na:na]
+
+2025-06-11T15:48:41.865-06:00  WARN 28128 --- [userservice] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105) ~[eureka-client-2.0.4.jar:2.0.4]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1575) ~[na:na]
+
+2025-06-11T15:48:41.878-06:00  INFO 28128 --- [userservice] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-11T15:48:41.896-06:00  INFO 28128 --- [userservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-11T15:48:41.914-06:00  INFO 28128 --- [userservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-11T15:48:41.919-06:00  INFO 28128 --- [userservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-11T15:48:41.939-06:00  INFO 28128 --- [userservice] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-06-11T15:48:44.946-06:00  INFO 28128 --- [userservice] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-06-11T15:48:44.976-06:00  INFO 28128 --- [userservice] [SpringApplicationShutdownHook] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/USERSERVICE/DESKTOP-QDBU73I:userservice:8081": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/USERSERVICE/DESKTOP-QDBU73I:userservice:8081": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:100)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:796)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:746)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1473)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:705)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1466)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1219)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1180)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:179)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:760)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:183)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:141)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 38 more
+
+2025-06-11T15:48:44.977-06:00  WARN 28128 --- [userservice] [SpringApplicationShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/USERSERVICE/DESKTOP-QDBU73I:userservice:8081": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2025-06-11T15:48:44.977-06:00 ERROR 28128 --- [userservice] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERSERVICE/DESKTOP-QDBU73I:userservice:8081 - de-registration failedCannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900) ~[eureka-client-2.0.4.jar:2.0.4]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389) ~[spring-cloud-context-4.2.0.jar:4.2.0]
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136) ~[spring-cloud-context-4.2.0.jar:4.2.0]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:796) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:746) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1473) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:705) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1466) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1219) ~[spring-context-6.2.6.jar:6.2.6]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1180) ~[spring-context-6.2.6.jar:6.2.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:179) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126) ~[spring-context-6.2.6.jar:6.2.6]
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147) ~[spring-boot-3.4.5.jar:3.4.5]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116) ~[spring-boot-3.4.5.jar:3.4.5]
+	at java.base/java.lang.Thread.run(Thread.java:1575) ~[na:na]
+
+2025-06-11T15:48:44.978-06:00  INFO 28128 --- [userservice] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-06-11T16:57:16.253-06:00  INFO 24168 --- [userservice] [main] c.e.userservice.UserserviceApplication   : Starting UserserviceApplication using Java 23.0.1 with PID 24168 (D:\ifons\Documents\JavaProjects\task-manager-fullApp\userservice\target\classes started by ifons in D:\ifons\Documents\JavaProjects\task-manager-fullApp\userservice)
+2025-06-11T16:57:16.296-06:00  INFO 24168 --- [userservice] [main] c.e.userservice.UserserviceApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-06-11T16:57:16.845-06:00  INFO 24168 --- [userservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-11T16:57:16.944-06:00  INFO 24168 --- [userservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92 ms. Found 2 JPA repository interfaces.
+2025-06-11T16:57:17.107-06:00  INFO 24168 --- [userservice] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=93c666b9-71c7-3a26-9471-89aeba8d13d2
+2025-06-11T16:57:17.362-06:00  INFO 24168 --- [userservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-06-11T16:57:17.372-06:00  INFO 24168 --- [userservice] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-11T16:57:17.372-06:00  INFO 24168 --- [userservice] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-11T16:57:17.420-06:00  INFO 24168 --- [userservice] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-11T16:57:17.420-06:00  INFO 24168 --- [userservice] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1088 ms
+2025-06-11T16:57:17.533-06:00  INFO 24168 --- [userservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-11T16:57:17.567-06:00  INFO 24168 --- [userservice] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-11T16:57:17.589-06:00  INFO 24168 --- [userservice] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-11T16:57:17.759-06:00  INFO 24168 --- [userservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-11T16:57:17.779-06:00  INFO 24168 --- [userservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-11T16:57:17.782-06:00  WARN 24168 --- [userservice] [main] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2025-06-11T16:57:18.007-06:00  INFO 24168 --- [userservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1ab28416
+2025-06-11T16:57:18.009-06:00  INFO 24168 --- [userservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-11T16:57:18.113-06:00  INFO 24168 --- [userservice] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-11T16:57:18.775-06:00  INFO 24168 --- [userservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-11T16:57:19.107-06:00  INFO 24168 --- [userservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-11T16:57:19.333-06:00  INFO 24168 --- [userservice] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-06-11T16:57:19.439-06:00  WARN 24168 --- [userservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-11T16:57:19.679-06:00  WARN 24168 --- [userservice] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-06-11T16:57:19.870-06:00  INFO 24168 --- [userservice] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-06-11T16:57:19.893-06:00  WARN 24168 --- [userservice] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-06-11T16:57:19.908-06:00  INFO 24168 --- [userservice] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-06-11T16:57:19.925-06:00  INFO 24168 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-06-11T16:57:19.928-06:00  INFO 24168 --- [userservice] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T16:57:19.934-06:00  INFO 24168 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-06-11T16:57:19.934-06:00  INFO 24168 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-06-11T16:57:19.935-06:00  INFO 24168 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-06-11T16:57:19.935-06:00  INFO 24168 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-06-11T16:57:19.935-06:00  INFO 24168 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-06-11T16:57:19.935-06:00  INFO 24168 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-06-11T16:57:19.935-06:00  INFO 24168 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-06-11T16:57:20.164-06:00  INFO 24168 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-06-11T16:57:20.165-06:00  INFO 24168 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-06-11T16:57:20.166-06:00  INFO 24168 --- [userservice] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-06-11T16:57:20.168-06:00  INFO 24168 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1749682640167 with initial instances count: 0
+2025-06-11T16:57:20.170-06:00  INFO 24168 --- [userservice] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USERSERVICE with eureka with status UP
+2025-06-11T16:57:20.171-06:00  INFO 24168 --- [userservice] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749682640171, current=UP, previous=STARTING]
+2025-06-11T16:57:20.172-06:00  INFO 24168 --- [userservice] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERSERVICE/DESKTOP-QDBU73I:userservice:8081: registering service...
+2025-06-11T16:57:20.183-06:00  INFO 24168 --- [userservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-06-11T16:57:20.184-06:00  INFO 24168 --- [userservice] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2025-06-11T16:57:20.197-06:00  INFO 24168 --- [userservice] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERSERVICE/DESKTOP-QDBU73I:userservice:8081 - registration status: 204
+2025-06-11T16:57:20.199-06:00  INFO 24168 --- [userservice] [main] c.e.userservice.UserserviceApplication   : Started UserserviceApplication in 4.313 seconds (process running for 4.708)
+2025-06-11T16:57:50.177-06:00  INFO 24168 --- [userservice] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-06-11T16:57:50.177-06:00  INFO 24168 --- [userservice] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-06-11T16:57:50.177-06:00  INFO 24168 --- [userservice] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-06-11T16:57:50.177-06:00  INFO 24168 --- [userservice] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-06-11T16:57:50.177-06:00  INFO 24168 --- [userservice] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-06-11T16:57:50.177-06:00  INFO 24168 --- [userservice] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2025-06-11T16:57:50.177-06:00  INFO 24168 --- [userservice] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-06-11T16:57:50.202-06:00  INFO 24168 --- [userservice] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-06-11T16:59:13.746-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-11T16:59:13.746-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-11T16:59:13.746-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-06-11T16:59:13.766-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-1] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T16:59:14.046-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-1] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T16:59:45.029-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-2] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T16:59:45.093-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-2] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T17:00:52.671-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-4] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T17:00:52.736-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-4] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T17:02:19.947-06:00  INFO 24168 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T17:02:39.044-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-6] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T17:02:39.113-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-6] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T17:03:52.575-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-8] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T17:03:52.637-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-8] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T17:06:03.218-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-10] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T17:06:03.286-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-10] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T17:07:19.960-06:00  INFO 24168 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T17:07:23.221-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-2] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T17:07:23.292-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-2] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T17:08:10.923-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-3] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T17:08:10.991-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-3] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T17:09:47.581-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-5] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T17:09:47.647-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-5] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T17:10:22.136-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-6] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T17:10:22.203-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-6] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T17:12:17.717-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-8] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T17:12:17.787-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-8] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T17:12:19.970-06:00  INFO 24168 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T17:13:28.072-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-10] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T17:13:28.140-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-10] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T17:17:19.986-06:00  INFO 24168 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T17:17:36.396-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-2] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T17:17:36.468-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-2] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T17:18:32.429-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-3] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T17:18:32.495-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-3] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T17:20:18.384-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-5] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T17:20:18.448-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-5] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T17:20:45.543-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-6] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T17:20:45.612-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-6] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T17:21:11.716-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-7] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T17:21:11.780-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-7] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T17:21:27.551-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-8] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T17:21:27.613-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-8] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T17:22:19.994-06:00  INFO 24168 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T17:23:37.300-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-10] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T17:23:37.362-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-10] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T17:24:09.747-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-1] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T17:24:09.818-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-1] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T17:24:24.878-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-2] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T17:24:24.942-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-2] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T17:27:20.007-06:00  INFO 24168 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T17:32:20.021-06:00  INFO 24168 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T17:37:20.033-06:00  INFO 24168 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T17:40:47.966-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-4] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T17:40:48.037-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-4] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T17:41:43.643-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-5] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T17:41:43.704-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-5] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T17:42:20.042-06:00  INFO 24168 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T17:47:20.049-06:00  INFO 24168 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T17:52:20.055-06:00  INFO 24168 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T17:57:20.071-06:00  INFO 24168 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T18:02:20.079-06:00  INFO 24168 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T18:07:20.083-06:00  INFO 24168 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T18:12:20.085-06:00  INFO 24168 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T18:17:20.101-06:00  INFO 24168 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T18:22:20.111-06:00  INFO 24168 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T18:27:20.120-06:00  INFO 24168 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T18:32:20.127-06:00  INFO 24168 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T18:37:20.141-06:00  INFO 24168 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T18:39:14.123-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-7] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/register from 127.0.0.1
+2025-06-11T18:39:14.142-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-7] c.e.u.security.RequestLoggingFilter      : Response: /auth/register (Status: 400)
+2025-06-11T18:39:18.128-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-8] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/register from 127.0.0.1
+2025-06-11T18:39:21.055-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-8] c.e.u.security.RequestLoggingFilter      : Response: /auth/register (Status: 200)
+2025-06-11T18:42:20.143-06:00  INFO 24168 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T18:47:20.155-06:00  INFO 24168 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T18:52:20.168-06:00  INFO 24168 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T18:57:20.181-06:00  INFO 24168 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T19:02:20.184-06:00  INFO 24168 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T19:06:02.475-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-10] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/register from 127.0.0.1
+2025-06-11T19:06:05.962-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-10] c.e.u.security.RequestLoggingFilter      : Response: /auth/register (Status: 200)
+2025-06-11T19:06:19.857-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-1] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/verify-otp from 127.0.0.1
+2025-06-11T19:06:19.971-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-1] c.e.u.security.RequestLoggingFilter      : Response: /auth/verify-otp (Status: 200)
+2025-06-11T19:07:02.409-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-2] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T19:07:02.480-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-2] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T19:07:20.196-06:00  INFO 24168 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T19:12:20.094-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-4] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/register from 127.0.0.1
+2025-06-11T19:12:20.210-06:00  INFO 24168 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T19:12:23.824-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-4] c.e.u.security.RequestLoggingFilter      : Response: /auth/register (Status: 200)
+2025-06-11T19:12:49.678-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-5] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/verify-otp from 127.0.0.1
+2025-06-11T19:12:49.741-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-5] c.e.u.security.RequestLoggingFilter      : Response: /auth/verify-otp (Status: 200)
+2025-06-11T19:13:24.924-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-6] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T19:13:25.073-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-6] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T19:15:20.543-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-8] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/register from 127.0.0.1
+2025-06-11T19:15:24.397-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-8] c.e.u.security.RequestLoggingFilter      : Response: /auth/register (Status: 200)
+2025-06-11T19:15:52.566-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-9] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/verify-otp from 127.0.0.1
+2025-06-11T19:15:52.665-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-9] c.e.u.security.RequestLoggingFilter      : Response: /auth/verify-otp (Status: 200)
+2025-06-11T19:16:47.983-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-10] c.e.u.security.RequestLoggingFilter      : Request: POST /auth/login from 127.0.0.1
+2025-06-11T19:16:48.053-06:00  INFO 24168 --- [userservice] [http-nio-8081-exec-10] c.e.u.security.RequestLoggingFilter      : Response: /auth/login (Status: 200)
+2025-06-11T19:17:20.212-06:00  INFO 24168 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T19:22:20.215-06:00  INFO 24168 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-11T19:27:20.226-06:00  INFO 24168 --- [userservice] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

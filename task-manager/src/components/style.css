@@ -1,0 +1,115 @@
+todo-container {
+    width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+        
+.todo-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+button {
+    margin-left: 10px;
+}
+
+.tasktable{
+  width: 100%;
+}
+
+.tasktable th, .tasktable td {
+  text-align: left;
+  padding: 8px;
+  word-wrap: break-word;
+}
+
+.tasktable tr:hover {
+  background-color: #dad2d2;
+}
+
+.tasklistssss {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.col-id {
+    width: 10%;
+}
+
+.col-desc {
+    width: 60%;
+}
+
+.col-dec {
+  width: 60%;
+  text-decoration: line-through;
+}
+
+.col-status {
+    width: 10%;
+}
+
+.col-action {
+    width: 10%;
+}
+
+
+.error-message {
+  color: #d32f2f;
+  background-color: #fde8e8;
+  padding: 10px;
+  border-radius: 4px;
+  border-left: 4px solid #d32f2f;
+  margin: 10px 0;
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.input-error {
+  border: 2px solid #d32f2f !important;
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
+}
+
+.success-message {
+  color: #388e3c;
+  background-color: #e8f5e9;
+  padding: 10px;
+  border-radius: 4px;
+  border-left: 4px solid #388e3c;
+  margin: 10px 0;
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@media (max-width: 575.98px) {
+  .todo-container {
+      width: 380px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+  }
+}
