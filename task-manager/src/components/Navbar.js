@@ -166,7 +166,7 @@ function Navbar() {
             else{
                 setLoggedIn(<div> 
                 <Link  to="/register" className="nav_item">Register</Link >
-                <Link  to="/login" className="nav_item">Login</Link >
+                <Link  to="/" className="nav_item">Login</Link >
                 </div>)
             }
           }, [sessionStorage.getItem('username'),cart]);

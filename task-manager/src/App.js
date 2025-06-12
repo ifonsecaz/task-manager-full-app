@@ -6,6 +6,7 @@ import Register from './components/Register';
 import VerifyOTP from './components/VerifyOTP';
 import TodoInput from './components/TodoInput';
 import TodoList from './components/TodoList';
+import ProtectedRoute from './components/ProtectedRoute';
 
 //import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
@@ -19,8 +20,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Login/>}/>
           <Route path="/verify-otp" element={<VerifyOTP/>}/> 
-          <Route path="/taskInput" element={<TodoInput/>}/>
-          <Route path="/taskList" element={<TodoList/>}/>
+          <Route path="/taskInput" element={<ProtectedRoute><TodoInput/></ProtectedRoute>}/>
+          <Route path="/taskList" element={<ProtectedRoute><TodoList/></ProtectedRoute>}/>
           <Route path="/register" element={<Register/>}/>
         </Routes>
         </Router>     
